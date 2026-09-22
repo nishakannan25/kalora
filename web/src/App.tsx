@@ -67,7 +67,39 @@ const MainContent: React.FC = () => {
     );
   }
 
-  return currentView === 'artisan' ? <ArtisanDashboard /> : <CustomerStore />;
+  return (
+    <div>
+      <div className="bg-stone-900 text-amber-100 py-2 px-4 flex items-center justify-between border-b border-amber-900/40 text-xs font-sans z-50 relative">
+        <div className="flex items-center space-x-2">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span className="font-semibold tracking-wider text-amber-200 uppercase">KALORA Platform Switcher:</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <button
+            onClick={() => setCurrentView('customer')}
+            className={`px-3 py-1 rounded-md transition-all text-xs font-medium ${
+              currentView === 'customer'
+                ? 'bg-amber-600 text-white shadow-sm font-semibold'
+                : 'bg-stone-800 text-stone-300 hover:text-white hover:bg-stone-700'
+            }`}
+          >
+            🛍️ Customer Store
+          </button>
+          <button
+            onClick={() => setCurrentView('artisan')}
+            className={`px-3 py-1 rounded-md transition-all text-xs font-medium ${
+              currentView === 'artisan'
+                ? 'bg-amber-600 text-white shadow-sm font-semibold'
+                : 'bg-stone-800 text-stone-300 hover:text-white hover:bg-stone-700'
+            }`}
+          >
+            🎨 Artisan Studio
+          </button>
+        </div>
+      </div>
+      {currentView === 'artisan' ? <ArtisanDashboard /> : <CustomerStore />}
+    </div>
+  );
 };
 
 export function App() {
