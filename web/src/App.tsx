@@ -13,15 +13,13 @@ const MainContent: React.FC = () => {
   const { loading, user } = useAuth();
   const searchParams = new URLSearchParams(window.location.search);
   const viewParam = searchParams.get('view');
-  
+  const port = window.location.port;
+  const envDefaultView = (import.meta as any).env?.VITE_DEFAULT_VIEW;
+
   // App onboarding flow states: 'WELCOME' | 'AUTH' | 'APP'
   const [flowState, setFlowState] = useState<'WELCOME' | 'AUTH' | 'APP'>(
     viewParam === 'onboarding' || envDefaultView === 'artisan' || port === '3001' ? 'WELCOME' : 'APP'
   );
-  
-  const port = window.location.port;
-
-  const envDefaultView = (import.meta as any).env?.VITE_DEFAULT_VIEW;
 
   const [currentView, setCurrentView] = useState<'customer' | 'artisan'>(
     envDefaultView === 'artisan' || port === '3001' || viewParam === 'artisan' || (user && user.role === 'ARTISAN' && port !== '3000')
