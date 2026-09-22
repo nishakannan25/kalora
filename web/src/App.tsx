@@ -21,14 +21,20 @@ const MainContent: React.FC = () => {
   
   const port = window.location.port;
 
+  const envDefaultView = (import.meta as any).env?.VITE_DEFAULT_VIEW;
+
   const [currentView, setCurrentView] = useState<'customer' | 'artisan'>(
-    port === '3001' || viewParam === 'artisan' || (user && user.role === 'ARTISAN' && port !== '3000')
+    envDefaultView === 'artisan' || port === '3001' || viewParam === 'artisan' || (user && user.role === 'ARTISAN' && port !== '3000')
       ? 'artisan'
       : 'customer'
   );
 
   React.useEffect(() => {
-    if (port === '3001') {
+    if (envDefaultView === 'artisan') {
+      setCurrentView('artisan');
+    } else if (envDefaultView === 'customer') {
+      setCurrentView('customer');
+    } else if (port === '3001') {
       setCurrentView('artisan');
     } else if (viewParam === 'artisan') {
       setCurrentView('artisan');
@@ -40,7 +46,7 @@ const MainContent: React.FC = () => {
     } else if (port === '3000' && !viewParam) {
       setCurrentView('customer');
     }
-  }, [user, viewParam, port]);
+  }, [user, viewParam, port, envDefaultView]);
 
   if (loading) {
     return (
