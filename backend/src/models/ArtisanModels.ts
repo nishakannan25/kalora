@@ -10,7 +10,7 @@ export interface IArtisanUser extends Document {
   email: string;
   phone: string;
   location: string;
-  craftCategory: 'HANDLOOM_SAREE' | 'POTTERY' | 'FURNITURE';
+  craftCategory: 'HANDLOOM_SAREE' | 'POTTERY' | 'FURNITURE' | 'WOODWORK' | 'WEAVING_TEXTILES' | 'HERITAGE_CRAFT' | 'EMBROIDERY';
   qrPassportHash: string;
   qrPassportValidUntil: string;
   createdAt: Date;
