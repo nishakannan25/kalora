@@ -16,7 +16,7 @@ const MainContent: React.FC = () => {
   
   // App onboarding flow states: 'WELCOME' | 'AUTH' | 'APP'
   const [flowState, setFlowState] = useState<'WELCOME' | 'AUTH' | 'APP'>(
-    viewParam === 'onboarding' ? 'WELCOME' : 'APP'
+    viewParam === 'onboarding' || envDefaultView === 'artisan' || port === '3001' ? 'WELCOME' : 'APP'
   );
   
   const port = window.location.port;
