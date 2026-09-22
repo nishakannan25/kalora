@@ -64,7 +64,7 @@ export class AuthService {
         email: user.email || `${user.phone}@kalora.org`,
         phone: user.phone || 'N/A',
         location: user.location || 'Kanchipuram, Tamil Nadu',
-        craftCategory: user.craftCategory || 'HANDLOOM_SAREE',
+        craftCategory: (user.craftCategory || 'HANDLOOM_SAREE') as any,
         qrPassportHash: `KALORA-QR-PASSPORT-${Math.floor(10000000 + Math.random() * 90000000)}`,
         qrPassportValidUntil: '2031-09-21'
       });
