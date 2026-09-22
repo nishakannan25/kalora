@@ -156,8 +156,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
         const googleUser: User = {
           id: googlePayload.sub || `google_${Date.now()}`,
-          name: googlePayload.name || 'Google Artisan',
-          email: googlePayload.email || 'codinganti07@gmail.com',
+          name: googlePayload.name || googlePayload.given_name || 'Artisan User',
+          email: googlePayload.email || `artisan_${Date.now()}@kalora.org`,
           role: 'ARTISAN',
           preferredLanguage: 'en',
           location: 'Verified via Google Account',
