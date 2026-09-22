@@ -1,0 +1,24 @@
+{
+  "model_name": "PotteryTerracottaPotsClassifier",
+  "dataset_name": "02_Terracotta_Pots",
+  "total_records": 320,
+  "matched_pairs": 320,
+  "corrupt_images": 0,
+  "label_status": "DERIVED / HEURISTIC \u2014 NOT GROUND TRUTH",
+  "classes": [
+    "Terracotta Planter & Pot"
+  ],
+  "num_classes": 1,
+  "backbone": "MobileNetV3-Small",
+  "batch_size": 32,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "max_epochs": 8,
+  "early_stopping_patience": 2,
+  "splits": {
+    "train": 256,
+    "val": 32,
+    "test": 32
+  },
+  "uncertainty_threshold": 0.6
+}

@@ -1,0 +1,33 @@
+{
+  "model_name": "MergedPotteryClassifier",
+  "dataset_name": "Merged_Pottery_10_Datasets",
+  "total_records": 11734,
+  "matched_pairs": 11734,
+  "corrupt_images": 0,
+  "label_status": "EXACT / DERIVED taxomony across 10 Pottery Datasets",
+  "classes": [
+    "Bonsai Pots",
+    "Cement Garden Pots",
+    "Ceramic Pots & Vases",
+    "Clay Earthenware Pots",
+    "Decorative Planters",
+    "Hanging Planters",
+    "Large Garden Pots",
+    "Plastic Nursery Pots",
+    "Small Indoor Pots",
+    "Terracotta Pots & Craft"
+  ],
+  "num_classes": 10,
+  "backbone": "MobileNetV3-Small",
+  "batch_size": 32,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "max_epochs": 8,
+  "early_stopping_patience": 2,
+  "splits": {
+    "train": 9387,
+    "val": 1173,
+    "test": 1174
+  },
+  "uncertainty_threshold": 0.6
+}

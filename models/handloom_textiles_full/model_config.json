@@ -1,0 +1,25 @@
+{
+  "model_name": "HandloomTextilesFullClassifier",
+  "dataset_name": "handloom_textiles_full.csv",
+  "total_metadata_records": 5162,
+  "verified_vision_records": 3572,
+  "label_type": "DERIVED / HEURISTIC LABELS",
+  "num_classes": 5,
+  "classes": [
+    "Apparel & Accessories",
+    "Cotton Handloom",
+    "Heritage & Fine Weaves",
+    "Saree General & Craft",
+    "Silk Handloom"
+  ],
+  "backbone": "MobileNetV3-Small",
+  "image_size": [
+    224,
+    224
+  ],
+  "split_ratio": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  }
+}

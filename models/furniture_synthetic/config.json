@@ -1,0 +1,19 @@
+{
+  "model_architecture": "MobileNetV3-Small",
+  "input_resolution": "224x224",
+  "num_classes": 4,
+  "class2idx": {
+    "Bed": 0,
+    "Chair": 1,
+    "Sofa": 2,
+    "Table": 3
+  },
+  "idx2class": {
+    "0": "Bed",
+    "1": "Chair",
+    "2": "Sofa",
+    "3": "Table"
+  },
+  "dataset_source": "https://huggingface.co/datasets/filnow/furniture-synthetic-dataset",
+  "status": "BASELINE / PROOF OF CONCEPT / PROMISING BUT NOT PRODUCTION-READY"
+}

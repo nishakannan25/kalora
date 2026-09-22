@@ -1,0 +1,34 @@
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+build/
+.next/
+.cache/
+coverage/
+*.log
+uploads/
+*.pt
+*.pth
+*.onnx
+*.zip
+*.tar.gz
+*.csv
+01_Ceramic_Pots/
+02_Terracotta_Pots/
+03_Plastic_Pots/
+04_Clay_Pots/
+05_Cement_Pots/
+Fabric WeaveNet Dataset/
+HandloomGCN/
+INDIA_FASHION_AI_MERGED/
+Pottery dataset/
+archive (1)/
+archive/
+downloaded_images/
+downloaded_images_furniture/
+handloom/
+handloom_men/
+tmp_pub/
+__pycache__/

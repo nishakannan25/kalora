@@ -1,0 +1,213 @@
+{
+  "metadata_dataset_size": 5162,
+  "vision_dataset_size": 3572,
+  "image_matching_audit": {
+    "total_csv_records": 5162,
+    "matched_image_records": 3572,
+    "unmatched_records": 1590,
+    "unique_matched_images": 1603,
+    "duplicate_image_matches": 1969,
+    "ambiguous_matches": 0
+  },
+  "marketplace_listed_price_stats": {
+    "price_type": "MARKETPLACE LISTED PRICE",
+    "total_valid_prices": 5162,
+    "min_price": 85.0,
+    "max_price": 369000.0,
+    "median_price": 1500.0,
+    "mean_price": 6115.99,
+    "std_price": 20054.21
+  },
+  "label_type": "DERIVED / HEURISTIC LABELS",
+  "class_distribution_metadata": {
+    "Cotton Handloom": 2002,
+    "Saree General & Craft": 1248,
+    "Apparel & Accessories": 1124,
+    "Silk Handloom": 620,
+    "Heritage & Fine Weaves": 168
+  },
+  "split_counts": {
+    "metadata_split": {
+      "train": 3508,
+      "val": 890,
+      "test": 764
+    },
+    "vision_split": {
+      "train": 2390,
+      "val": 596,
+      "test": 586
+    }
+  },
+  "experiment_a_text": {
+    "val_accuracy": 0.9438,
+    "test_accuracy": 0.9162,
+    "test_balanced_accuracy": 0.8991,
+    "potential_leakage_flag": false
+  },
+  "experiment_b_ablated_text": {
+    "val_accuracy": 0.791,
+    "test_accuracy": 0.699,
+    "test_balanced_accuracy": 0.7026,
+    "potential_leakage_flag": false
+  },
+  "experiment_c_vision": {
+    "val_best_accuracy": 0.547,
+    "test_accuracy": 0.4744,
+    "test_balanced_accuracy": 0.4313,
+    "training_duration_seconds": 865.55,
+    "confusion_matrix": [
+      [
+        44,
+        52,
+        0,
+        28,
+        4
+      ],
+      [
+        12,
+        120,
+        0,
+        72,
+        10
+      ],
+      [
+        0,
+        8,
+        12,
+        4,
+        0
+      ],
+      [
+        8,
+        34,
+        0,
+        94,
+        10
+      ],
+      [
+        14,
+        28,
+        0,
+        24,
+        8
+      ]
+    ],
+    "classification_report": {
+      "Apparel & Accessories": {
+        "precision": 0.5641025641025641,
+        "recall": 0.34375,
+        "f1-score": 0.42718446601941745,
+        "support": 128.0
+      },
+      "Cotton Handloom": {
+        "precision": 0.49586776859504134,
+        "recall": 0.5607476635514018,
+        "f1-score": 0.5263157894736842,
+        "support": 214.0
+      },
+      "Heritage & Fine Weaves": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 24.0
+      },
+      "Saree General & Craft": {
+        "precision": 0.42342342342342343,
+        "recall": 0.6438356164383562,
+        "f1-score": 0.5108695652173914,
+        "support": 146.0
+      },
+      "Silk Handloom": {
+        "precision": 0.25,
+        "recall": 0.10810810810810811,
+        "f1-score": 0.1509433962264151,
+        "support": 74.0
+      },
+      "accuracy": 0.47440273037542663,
+      "macro avg": {
+        "precision": 0.5466787512242057,
+        "recall": 0.43128827761957317,
+        "f1-score": 0.45639597672071497,
+        "support": 586.0
+      },
+      "weighted avg": {
+        "precision": 0.4823219291882029,
+        "recall": 0.47440273037542663,
+        "f1-score": 0.4591603386354056,
+        "support": 586.0
+      }
+    }
+  },
+  "failure_cases_sample": [
+    {
+      "product_name": "Mercerized Cotton Saree",
+      "true_label": "Silk Handloom",
+      "predicted_label": "Cotton Handloom",
+      "predicted_prob": 0.5970914363861084,
+      "image_filename": "freepik__assistant__83027.png"
+    },
+    {
+      "product_name": "Mercerized Cotton Saree",
+      "true_label": "Silk Handloom",
+      "predicted_label": "Cotton Handloom",
+      "predicted_prob": 0.5970914363861084,
+      "image_filename": "freepik__assistant__83027.png"
+    },
+    {
+      "product_name": "Box Check Santipuri Saree",
+      "true_label": "Saree General & Craft",
+      "predicted_label": "Cotton Handloom",
+      "predicted_prob": 0.7031465172767639,
+      "image_filename": "freepik__expand__33483.png"
+    },
+    {
+      "product_name": "Box Check Santipuri Saree",
+      "true_label": "Saree General & Craft",
+      "predicted_label": "Cotton Handloom",
+      "predicted_prob": 0.7031465172767639,
+      "image_filename": "freepik__expand__33483.png"
+    },
+    {
+      "product_name": "Handwoven Cotton Saree with Geometric Motifs I Brown",
+      "true_label": "Cotton Handloom",
+      "predicted_label": "Saree General & Craft",
+      "predicted_prob": 0.8351850509643555,
+      "image_filename": "freepik__enhance__53590.png"
+    },
+    {
+      "product_name": "Handwoven Cotton Saree with Geometric Motifs I Brown",
+      "true_label": "Cotton Handloom",
+      "predicted_label": "Saree General & Craft",
+      "predicted_prob": 0.8351850509643555,
+      "image_filename": "freepik__enhance__53590.png"
+    },
+    {
+      "product_name": "Handloom Molakalmuru Silk Saree | Emerald Green",
+      "true_label": "Silk Handloom",
+      "predicted_label": "Cotton Handloom",
+      "predicted_prob": 0.5793386697769165,
+      "image_filename": "magnific__assistant__4099.png"
+    },
+    {
+      "product_name": "Handloom Molakalmuru Silk Saree | Emerald Green",
+      "true_label": "Silk Handloom",
+      "predicted_label": "Cotton Handloom",
+      "predicted_prob": 0.5793386697769165,
+      "image_filename": "magnific__assistant__4099.png"
+    },
+    {
+      "product_name": "Mercerized Cotton Saree",
+      "true_label": "Silk Handloom",
+      "predicted_label": "Cotton Handloom",
+      "predicted_prob": 0.6623830199241638,
+      "image_filename": "freepik__expand__90273.png"
+    },
+    {
+      "product_name": "Mercerized Cotton Saree",
+      "true_label": "Silk Handloom",
+      "predicted_label": "Cotton Handloom",
+      "predicted_prob": 0.6623830199241638,
+      "image_filename": "freepik__expand__90273.png"
+    }
+  ]
+}

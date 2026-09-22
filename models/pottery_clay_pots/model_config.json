@@ -1,0 +1,24 @@
+{
+  "model_name": "PotteryClayPotsClassifier",
+  "dataset_name": "04_Clay_Pots",
+  "total_records": 339,
+  "matched_pairs": 339,
+  "corrupt_images": 0,
+  "label_status": "DERIVED / HEURISTIC \u2014 NOT GROUND TRUTH",
+  "classes": [
+    "Clay Planter & Pot"
+  ],
+  "num_classes": 1,
+  "backbone": "MobileNetV3-Small",
+  "batch_size": 32,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "max_epochs": 8,
+  "early_stopping_patience": 2,
+  "splits": {
+    "train": 271,
+    "val": 34,
+    "test": 34
+  },
+  "uncertainty_threshold": 0.6
+}

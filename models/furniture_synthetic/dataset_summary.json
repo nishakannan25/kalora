@@ -1,0 +1,23 @@
+{
+  "dataset_source": "filnow/furniture-synthetic-dataset",
+  "synthetic_train_images": 9000,
+  "real_test_images": 1000,
+  "categories": [
+    "Bed",
+    "Chair",
+    "Sofa",
+    "Table"
+  ],
+  "train_class_distribution": {
+    "Bed": 2250,
+    "Sofa": 2250,
+    "Chair": 2250,
+    "Table": 2250
+  },
+  "test_class_distribution": {
+    "Chair": 303,
+    "Sofa": 277,
+    "Table": 239,
+    "Bed": 181
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "object": {
+    "category": "saree",
+    "detected_type": "Vintage_Saree",
+    "confidence": 0.15
+  },
+  "quality": {
+    "overall_score": 33,
+    "blur": {
+      "detected": true,
+      "level": "SEVERE",
+      "score": 79.6,
+      "raw_var": 3.39,
+      "tenengrad": 1507.65,
+      "edge_density": 0.8
+    },
+    "resolution": {
+      "label": "LOW RESOLUTION",
+      "detected": true,
+      "score": 25,
+      "width": 131,
+      "height": 110
+    },
+    "low_light": {
+      "label": "OPTIMAL",
+      "detected": false,
+      "score": 91,
+      "brightness": 106.2
+    },
+    "noise": {
+      "detected": true,
+      "score": 10
+    },
+    "breakdown": {
+      "sharpness": 20,
+      "lighting": 91,
+      "resolution": 25,
+      "color": 47,
+      "noise": 10,
+      "pattern_detail": 22
+    },
+    "detected_issues": [
+      "SEVERE BLUR (79%)",
+      "LOW SOURCE RESOLUTION (131x110)",
+      "REDUCED PATTERN VISIBILITY"
+    ]
+  },
+  "pattern": {
+    "model": "KALORA Trained Craft Classifier (MobileNetV3)",
+    "predicted_class": "Vintage_Saree",
+    "confidence": 0.15,
+    "pattern_status": "LOW CONFIDENCE (High Blur)",
+    "pattern_verified": false,
+    "similarity": 0.3,
+    "anomaly_detected": true,
+    "anomaly_score": 0.7
+  },
+  "autofill": {
+    "product_name": {
+      "value": "Authentic Handcrafted Vintage_Saree",
+      "confidence": 0.15
+    },
+    "category": {
+      "value": "WEAVING_TEXTILES",
+      "confidence": 0.14
+    },
+    "material": {
+      "value": "Pure Zari Silk & Fine Thread",
+      "confidence": 0.13,
+      "requires_verification": true
+    },
+    "colors": [
+      "Deep Red",
+      "Zari Gold"
+    ],
+    "technique": {
+      "value": "Korvai Traditional Handloom Weaving",
+      "confidence": 0.14
+    },
+    "dimensions": {
+      "value": null,
+      "requires_user_input": true,
+      "message": "Please enter dimensions manually."
+    },
+    "price": {
+      "value": 4500,
+      "confidence": 0.8,
+      "is_suggestion": true
+    },
+    "description": {
+      "value": "Exquisite handcrafted vintage_saree showcasing traditional artisan heritage and meticulous detail.",
+      "ai_generated": true
+    },
+    "artisan_story": {
+      "value": "Handcrafted by generational artisans using authentic regional techniques passed down through centuries.",
+      "ai_generated": true,
+      "requires_review": true
+    }
+  },
+  "recommended_processing": [
+    "deblur",
+    "super_resolution"
+  ]
+}

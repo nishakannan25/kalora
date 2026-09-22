@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KALORA — Rural Artisan Craft & Digital Passport Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #8b4513;
+      --primary-hover: #72360d;
+      --accent: #d97706;
+      --accent-light: #fef3c7;
+      --bg: #fdfbf7;
+      --card-bg: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+    body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; }
+
+    /* Top Navbar */
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky; top: 0; z-index: 100;
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+    .brand-logo { font-size: 1.8rem; font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--primary); letter-spacing: -0.5px; }
+    .brand-tag { font-size: 0.75rem; background: var(--accent-light); color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 20px; font-weight: 600; }
+    .nav-links { display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; }
+    .nav-btn {
+      background: none; border: none; font-size: 0.9rem; font-weight: 600; color: var(--text-muted); cursor: pointer;
+      padding: 0.5rem 0.8rem; border-radius: 8px; transition: all 0.2s ease;
+    }
+    .nav-btn:hover, .nav-btn.active { color: var(--primary); background: #f7ede2; }
+    .cta-btn { background: var(--primary); color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 10px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+    .cta-btn:hover { background: var(--primary-hover); transform: translateY(-1px); }
+
+    /* Main Container & Sections */
+    .main-content { max-width: 1280px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .section { display: none; }
+    .section.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Welcome Hero */
+    .welcome-hero {
+      background: linear-gradient(135deg, #8b4513 0%, #d97706 100%);
+      color: white; border-radius: var(--radius); padding: 4rem 2.5rem; text-align: center;
+      box-shadow: 0 20px 30px -10px rgba(139, 69, 19, 0.3); margin-bottom: 2rem;
+    }
+    .welcome-hero h1 { font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+    .welcome-hero p { font-size: 1.2rem; opacity: 0.95; max-width: 750px; margin: 0 auto 2rem auto; }
+    
+    .lang-row { display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .lang-btn {
+      background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); color: white;
+      padding: 0.6rem 1.2rem; border-radius: 25px; font-weight: 600; cursor: pointer; transition: 0.2s;
+    }
+    .lang-btn:hover, .lang-btn.active { background: white; color: var(--primary); }
+
+    /* Login & Signup Forms */
+    .auth-box { max-width: 480px; margin: 2rem auto; background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem; box-shadow: var(--shadow); }
+    .auth-title { font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; text-align: center; }
+    .auth-sub { font-size: 0.9rem; color: var(--text-muted); text-align: center; margin-bottom: 2rem; }
+
+    .form-group { margin-bottom: 1.5rem; }
+    .form-label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main); font-size: 0.9rem; }
+    .form-input, .form-select, .form-textarea { width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--border); border-radius: 10px; font-size: 0.95rem; }
+    .form-textarea { height: 90px; resize: vertical; }
+
+    .otp-grid { display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem; }
+    .otp-input { width: 45px; height: 55px; text-align: center; font-size: 1.5rem; font-weight: 700; border: 1px solid var(--border); border-radius: 10px; }
+
+    /* Product Grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-top: 1.5rem; }
+    .card {
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow); transition: transform 0.2s ease; display: flex; flex-direction: column;
+    }
+    .card:hover { transform: translateY(-4px); }
+    .card-img-wrap { height: 220px; background: #f3f4f6; position: relative; overflow: hidden; }
+    .card-img { width: 100%; height: 100%; object-fit: cover; }
+    .sector-tag { position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+    .quality-badge { position: absolute; top: 12px; right: 12px; background: #ecfdf5; color: #047857; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
+    .card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+    .card-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-main); }
+    .card-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
+    .card-price { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-top: auto; margin-bottom: 1rem; }
+    .card-btn { width: 100%; background: #fdfbf7; border: 1px solid var(--primary); color: var(--primary); padding: 0.6rem; border-radius: 10px; font-weight: 600; cursor: pointer; transition: 0.2s; text-align: center; text-decoration: none; display: block; }
+    .card-btn:hover { background: var(--primary); color: white; }
+
+    /* Portal & Results */
+    .portal-box { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow); }
+    .voice-box { background: #fef3c7; border: 2px dashed #f59e0b; padding: 1.5rem; border-radius: 12px; text-align: center; margin-bottom: 1.5rem; }
+    .mic-btn { background: #d97706; color: white; border: none; width: 60px; height: 60px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; margin-bottom: 0.5rem; }
+    .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+    .metric-card { background: #f9fafb; border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem; }
+    .metric-val { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
+
+    footer { border-top: 1px solid var(--border); margin-top: 4rem; padding: 2rem; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <a href="#" class="brand">
+      <span class="brand-logo">KALORA</span>
+      <span class="brand-tag">SIH 2026</span>
+    </a>
+    <nav class="nav-links">
+      <button class="nav-btn active" onclick="switchTab('welcome')">🌐 Welcome</button>
+      <button class="nav-btn" onclick="switchTab('login')">🔑 Login (OTP)</button>
+      <button class="nav-btn" onclick="switchTab('signup')">📝 Register Artisan</button>
+      <button class="nav-btn" onclick="switchTab('marketplace')">🛒 Marketplace</button>
+      <button class="nav-btn" onclick="switchTab('artisan-portal')">🎙️ AI Portal</button>
+      <button class="nav-btn" onclick="switchTab('passports')">📜 Passports</button>
+      <button class="nav-btn" onclick="switchTab('admin')">📊 Admin</button>
+      <button class="cta-btn" onclick="switchTab('login')">Artisan Login</button>
+    </nav>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+
+    <!-- 1. WELCOME PAGE -->
+    <section id="welcome" class="section active">
+      <div class="welcome-hero">
+        <h1>Welcome to KALORA</h1>
+        <p id="welcomeTagline">Empowering Rural Indian Artisans with Multi-Modal AI Cataloging, Fair Price Advisory & Digital Craft Passports.</p>
+        
+        <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9;">Choose Your Language (7 Languages Supported)</div>
+        <div class="lang-row">
+          <button class="lang-btn active" onclick="selectLang('en', 'Your Craft. Your Story. Your Market.')">English</button>
+          <button class="lang-btn" onclick="selectLang('hi', 'आपकी कला। आपकी कहानी। आपका बाज़ार।')">हिंदी (Hindi)</button>
+          <button class="lang-btn" onclick="selectLang('ta', 'உங்கள் கைவினை. உங்கள் கதை. உங்கள் சந்தை.')">தமிழ் (Tamil)</button>
+          <button class="lang-btn" onclick="selectLang('bn', 'আপনার হস্তশিল্প। আপনার গল্প। আপনার বাজার।')">বাংলা (Bengali)</button>
+          <button class="lang-btn" onclick="selectLang('te', 'మీ హస్తకళ. మీ కథ. మీ మార్కెట్.')">తెలుగు (Telugu)</button>
+          <button class="lang-btn" onclick="selectLang('mr', 'तुमची कला. तुमची गोष्ट. तुमची बाजारपेठ.')">मराठी (Marathi)</button>
+          <button class="lang-btn" onclick="selectLang('kn', 'ನಿಮ್ಮ ಕಲೆ. ನಿಮ್ಮ ಕಥೆ. ನಿಮ್ಮ ಮಾರುಕಟ್ಟೆ.')">ಕನ್ನಡ (Kannada)</button>
+        </div>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <button class="cta-btn" style="background: white; color: var(--primary); padding: 0.9rem 2rem; font-size: 1.1rem;" onclick="switchTab('marketplace')">Explore Craft Marketplace 🛒</button>
+          <button class="cta-btn" style="background: rgba(255,255,255,0.25); border: 1px solid white; padding: 0.9rem 2rem; font-size: 1.1rem;" onclick="switchTab('login')">Artisan Login (OTP) 🔑</button>
+        </div>
+      </div>
+
+      <!-- Feature Cards -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem;">
+        <div class="portal-box" style="text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎙️</div>
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.3rem; margin-bottom: 0.5rem;">Voice-First Extraction</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Artisans speak in their native dialect. Multi-modal AI extracts material, dimensions, and craft technique instantly.</p>
+        </div>
+        <div class="portal-box" style="text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🏷️</div>
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.3rem; margin-bottom: 0.5rem;">Fair Price Advisor</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Explainable cost-plus algorithm calculates fair pricing based on labor hours, raw material cost, and regional heritage.</p>
+        </div>
+        <div class="portal-box" style="text-align: center;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📜</div>
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.3rem; margin-bottom: 0.5rem;">Digital Craft Passport</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Immutable public product passport with a scannable vector QR code for buyer transparency and anti-counterfeiting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. LOGIN PAGE (PASSWORDLESS OTP) -->
+    <section id="login" class="section">
+      <div class="auth-box">
+        <div class="auth-title">Artisan OTP Login</div>
+        <div class="auth-sub">Passwordless SMS / Voice OTP Authentication for Rural Artisans</div>
+
+        <div id="otpStep1">
+          <div class="form-group">
+            <label class="form-label">Mobile Phone Number</label>
+            <div style="display: flex; gap: 0.5rem;">
+              <span style="padding: 0.8rem; background: #f3f4f6; border: 1px solid var(--border); border-radius: 10px; font-weight: 600;">+91</span>
+              <input type="tel" class="form-input" id="phoneNum" placeholder="98765 43210" value="9876543210" />
+            </div>
+          </div>
+
+          <button class="cta-btn" style="width: 100%; padding: 0.9rem; font-size: 1rem;" onclick="sendOTP()">Send 6-Digit OTP Code 📲</button>
+        </div>
+
+        <div id="otpStep2" style="display: none;">
+          <div style="background: #ecfdf5; border: 1px solid #6ee7b7; padding: 0.8rem; border-radius: 10px; color: #065f46; margin-bottom: 1.5rem; text-align: center; font-size: 0.9rem;">
+            ✓ Demo OTP sent to <strong>+91 9876543210</strong>. Enter code <strong>123456</strong> below:
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" style="text-align: center;">Enter 6-Digit OTP</label>
+            <div class="otp-grid">
+              <input type="text" maxlength="1" class="otp-input" value="1" />
+              <input type="text" maxlength="1" class="otp-input" value="2" />
+              <input type="text" maxlength="1" class="otp-input" value="3" />
+              <input type="text" maxlength="1" class="otp-input" value="4" />
+              <input type="text" maxlength="1" class="otp-input" value="5" />
+              <input type="text" maxlength="1" class="otp-input" value="6" />
+            </div>
+          </div>
+
+          <button class="cta-btn" style="width: 100%; padding: 0.9rem; font-size: 1rem;" onclick="verifyOTP()">Verify & Continue to AI Portal 🚀</button>
+        </div>
+
+        <div style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+          Don't have an artisan account? <a href="#" style="color: var(--primary); font-weight: 600;" onclick="switchTab('signup')">Register Here</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SIGNUP / REGISTRATION PAGE -->
+    <section id="signup" class="section">
+      <div class="auth-box" style="max-width: 580px;">
+        <div class="auth-title">New Artisan Registration</div>
+        <div class="auth-sub">Create your verified Rural Artisan identity profile</div>
+
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-input" placeholder="e.g. Lakshmi Ammal" value="Lakshmi Ammal" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Craft Sector</label>
+          <select class="form-select">
+            <option value="handloom">🧶 Handlooms & Textiles</option>
+            <option value="pottery">🏺 Pottery & Terracotta</option>
+            <option value="furniture">🪑 Furniture / Woodcraft</option>
+          </select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="form-group">
+          <div>
+            <label class="form-label">State / Region</label>
+            <input type="text" class="form-input" value="Kanchipuram, Tamil Nadu" />
+          </div>
+          <div>
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-input" value="+91 9876543210" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Craft Experience & Artisan Story</label>
+          <textarea class="form-textarea" placeholder="Describe your craft background, techniques passed down through generations...">Master weaver with 25 years of experience crafting silk sarees in Kanchipuram using traditional handloom looms.</textarea>
+        </div>
+
+        <button class="cta-btn" style="width: 100%; padding: 0.9rem; font-size: 1rem;" onclick="registerArtisan()">Create Account & Start Cataloging 🎨</button>
+      </div>
+    </section>
+
+    <!-- 4. MARKETPLACE PAGE -->
+    <section id="marketplace" class="section">
+      <div style="margin-bottom: 1.5rem;">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 2rem;">Authentic Indian Craft Marketplace</h2>
+        <p style="color: var(--text-muted);">Verified artisan products with explainable fair prices and public Craft Passports.</p>
+      </div>
+
+      <div class="grid" id="productGrid">
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Kanjeevaram Saree" class="card-img" />
+            <span class="sector-tag">Handlooms</span>
+            <span class="quality-badge">Grade A (95%)</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Kanjeevaram Pure Silk Saree</h3>
+            <div class="card-meta">
+              <span>📍 Kanchipuram, TN</span>
+              <span>🧵 Pure Zari Silk</span>
+            </div>
+            <div class="card-price">₹ 14,500 <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: normal;">(Fair Price Verified)</span></div>
+            <a href="/passports/PROD-1001.html" class="card-btn" target="_blank">View Digital Passport & QR 📜</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=600&q=80" alt="Terracotta Pot" class="card-img" />
+            <span class="sector-tag">Pottery</span>
+            <span class="quality-badge">Grade A (92%)</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Handcrafted Terracotta Matka</h3>
+            <div class="card-meta">
+              <span>📍 Bankura, WB</span>
+              <span>🏺 Natural Clay</span>
+            </div>
+            <div class="card-price">₹ 850 <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: normal;">(Fair Price Verified)</span></div>
+            <a href="/passports/PROD-1002.html" class="card-btn" target="_blank">View Digital Passport & QR 📜</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1580481072645-022f9a6d8310?auto=format&fit=crop&w=600&q=80" alt="Wooden Chair" class="card-img" />
+            <span class="sector-tag">Furniture</span>
+            <span class="quality-badge">Grade A (96%)</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Carved Teak Wooden Armchair</h3>
+            <div class="card-meta">
+              <span>📍 Saharanpur, UP</span>
+              <span>🪵 Solid Teak Wood</span>
+            </div>
+            <div class="card-price">₹ 18,200 <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: normal;">(Fair Price Verified)</span></div>
+            <a href="/passports/PROD-1003.html" class="card-btn" target="_blank">View Digital Passport & QR 📜</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. AI ARTISAN PORTAL -->
+    <section id="artisan-portal" class="section">
+      <div style="margin-bottom: 2rem;">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 2rem;">AI Product Extraction & Audit Portal</h2>
+        <p style="color: var(--text-muted);">Multi-modal speech-to-text transcript processing, vision model attribute extraction, and fair pricing engine.</p>
+      </div>
+
+      <div class="portal-box">
+        <div class="voice-box">
+          <button class="mic-btn" onclick="simulateVoiceInput()">🎙️</button>
+          <div style="font-weight: 700; color: #92400e; margin-bottom: 0.3rem;">Tap Microphone for Voice Input</div>
+          <div style="font-size: 0.85rem; color: #b45309;">Supports 7 Languages: English, Hindi, Tamil, Bengali, Telugu, Marathi, Kannada</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Voice Transcript / Text Description</label>
+          <textarea class="form-textarea" id="artisanTranscript">Kanjeevaram silk saree with zari border from Kanchipuram, 5.5 meters long, pure silk material, 30 labor hours, material cost 2500 INR.</textarea>
+        </div>
+
+        <button class="cta-btn" style="width: 100%; padding: 0.9rem; font-size: 1rem;" onclick="runAIExtraction()">⚡ Extract Attributes & Audit Product</button>
+
+        <div id="aiResultBox" style="display: none; margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+          <h3 style="font-family: 'Outfit', sans-serif; color: var(--primary); margin-bottom: 1rem;">AI Extraction Results</h3>
+          <div class="result-grid">
+            <div class="metric-card">
+              <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">SECTOR & CATEGORY</div>
+              <div class="metric-val">Handlooms & Textiles (Saree)</div>
+              <div style="font-size: 0.85rem; color: #047857; margin-top: 0.3rem;">✓ Model Confidence: 94.2%</div>
+            </div>
+            <div class="metric-card">
+              <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">FAIR PRICE ADVISOR ESTIMATE</div>
+              <div class="metric-val">₹ 8,950 INR</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem;">Range: ₹ 7,800 – ₹ 10,100</div>
+            </div>
+            <div class="metric-card">
+              <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">CATALOG QUALITY SCORE</div>
+              <div class="metric-val">95.0 / 100 (Grade A)</div>
+              <div style="font-size: 0.85rem; color: #047857; margin-top: 0.3rem;">✓ All 11 attributes verified</div>
+            </div>
+            <div class="metric-card">
+              <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">MARKET READINESS</div>
+              <div class="metric-val" style="color: #047857;">Ready for Market</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem;">✓ 0 Critical Blockers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. DIGITAL PASSPORTS PAGE -->
+    <section id="passports" class="section">
+      <div style="margin-bottom: 2rem;">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 2rem;">Digital Craft Passports</h2>
+        <p style="color: var(--text-muted);">Immutable passports with shareable QR codes for every verified artisan product.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-body">
+            <span class="sector-tag" style="position: static; display: inline-block; margin-bottom: 0.5rem;">KALORA-PASSPORT-1001</span>
+            <h3 class="card-title">Kanjeevaram Pure Silk Saree</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Artisan: Lakshmi Ammal | Kanchipuram, TN</p>
+            <a href="/passports/PROD-1001.html" target="_blank" class="card-btn">Open Public Passport 🌐</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <span class="sector-tag" style="position: static; display: inline-block; margin-bottom: 0.5rem;">KALORA-PASSPORT-1002</span>
+            <h3 class="card-title">Terracotta Clay Water Matka</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Artisan: Ramesh Kumbhar | Bankura, WB</p>
+            <a href="/passports/PROD-1002.html" target="_blank" class="card-btn">Open Public Passport 🌐</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <span class="sector-tag" style="position: static; display: inline-block; margin-bottom: 0.5rem;">KALORA-PASSPORT-1003</span>
+            <h3 class="card-title">Carved Teak Wooden Armchair</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Artisan: Gurdev Singh | Saharanpur, UP</p>
+            <a href="/passports/PROD-1003.html" target="_blank" class="card-btn">Open Public Passport 🌐</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. ADMIN DASHBOARD -->
+    <section id="admin" class="section">
+      <div style="margin-bottom: 2rem;">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 2rem;">Admin & Verification Portal</h2>
+        <p style="color: var(--text-muted);">Supervisor governance dashboard monitoring sector products and verification queue.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+        <div class="metric-card"><div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">TOTAL ARTISANS</div><div class="metric-val">1,248</div></div>
+        <div class="metric-card"><div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">PRODUCTS PUBLISHED</div><div class="metric-val">3,890</div></div>
+        <div class="metric-card"><div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">VERIFIED PASSPORTS</div><div class="metric-val">3,540</div></div>
+        <div class="metric-card"><div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">REVIEW QUEUE</div><div class="metric-val" style="color: var(--accent);">14</div></div>
+      </div>
+
+      <a href="/admin/dashboard.html" target="_blank" class="cta-btn" style="display: inline-block; text-decoration: none; padding: 0.8rem 1.5rem;">Launch Full Interactive Admin Portal 📊</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>KALORA — Smart India Hackathon (SIH) 2026 | Empowering Rural Indian Artisans</div>
+    <div style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">Handlooms & Textiles • Pottery & Terracotta • Furniture / Woodcraft</div>
+  </footer>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+
+      const targetSec = document.getElementById(tabId);
+      if (targetSec) targetSec.classList.add('active');
+
+      const btnMap = {
+        'welcome': 0,
+        'login': 1,
+        'signup': 2,
+        'marketplace': 3,
+        'artisan-portal': 4,
+        'passports': 5,
+        'admin': 6
+      };
+      const btns = document.querySelectorAll('.nav-btn');
+      if (btns[btnMap[tabId]]) btns[btnMap[tabId]].classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function selectLang(code, tagline) {
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById('welcomeTagline').innerText = tagline;
+    }
+
+    function sendOTP() {
+      document.getElementById('otpStep1').style.display = 'none';
+      document.getElementById('otpStep2').style.display = 'block';
+    }
+
+    function verifyOTP() {
+      alert('✓ Phone + OTP Authentication Successful! Logged in as Lakshmi Ammal.');
+      switchTab('artisan-portal');
+    }
+
+    function registerArtisan() {
+      alert('✓ Artisan Account Created Successfully! Welcome to KALORA.');
+      switchTab('artisan-portal');
+    }
+
+    function simulateVoiceInput() {
+      const phrases = [
+        "Kanjeevaram silk saree with gold zari border from Kanchipuram, 5.5 meters",
+        "Bankura terracotta clay matka for drinking water, hand carved natural clay",
+        "Saharanpur carved teak wood armchair with polished walnut finish"
+      ];
+      document.getElementById('artisanTranscript').value = phrases[Math.floor(Math.random() * phrases.length)];
+    }
+
+    function runAIExtraction() {
+      const box = document.getElementById('aiResultBox');
+      box.style.display = 'block';
+      box.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

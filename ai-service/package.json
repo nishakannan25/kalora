@@ -1,0 +1,12 @@
+{
+  "name": "@kalora/ai-service",
+  "version": "1.0.0",
+  "main": "dist/providers/index.js",
+  "types": "dist/interfaces/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

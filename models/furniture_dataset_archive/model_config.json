@@ -1,0 +1,21 @@
+{
+  "model_architecture": "MobileNetV3-Small",
+  "input_resolution": "224x224",
+  "num_classes": 5,
+  "class2idx": {
+    "Almirah": 0,
+    "Chair": 1,
+    "Fridge": 2,
+    "TV": 3,
+    "Table": 4
+  },
+  "idx2class": {
+    "0": "Almirah",
+    "1": "Chair",
+    "2": "Fridge",
+    "3": "TV",
+    "4": "Table"
+  },
+  "derived_labels_status": "DERIVED / HEURISTIC \u2014 NOT GROUND TRUTH",
+  "status": "BASELINE / PROOF OF CONCEPT / PROMISING BUT NOT PRODUCTION-READY"
+}

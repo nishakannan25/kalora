@@ -1,0 +1,66 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                String    @id @default(uuid())
+  name              String
+  email             String?   @unique
+  phone             String?   @unique
+  passwordHash      String?
+  role              String    @default("ARTISAN") // ARTISAN, BUYER, ADMIN
+  preferredLanguage String    @default("en")      // en, ta, hi
+  location          String?
+  craftCategory     String?
+  isGoogleUser      Boolean   @default(false)
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  products          Product[]
+}
+
+model Product {
+  id               String         @id @default(uuid())
+  artisanId        String
+  artisan          User           @relation(fields: [artisanId], references: [id], onDelete: Cascade)
+  productName      String
+  category         String?
+  material         String?
+  color            String?
+  size             String?
+  dimensions       String?
+  weight           String?
+  productionMethod String?
+  productionTime   String?
+  craftTechnique   String?
+  region           String?
+  artisanStory     String?
+  description      String?
+  price            Float?         @default(0.0)
+  status           String         @default("DRAFT") // DRAFT, PROCESSING, READY, PUBLISHED
+  images           ProductImage[]
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+}
+
+model ProductImage {
+  id                String   @id @default(uuid())
+  productId         String
+  product           Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  originalUrl       String
+  enhancedUrl       String?
+  bgRemovedUrl      String?
+  blurScore         Float?   @default(0.0)
+  blurStatus        String?  @default("CLEAR") // CLEAR, SLIGHTLY_BLURRY, SEVERELY_BLURRY
+  brightnessScore   Float?   @default(1.0)
+  contrastScore     Float?   @default(1.0)
+  sharpnessScore    Float?   @default(1.0)
+  isPrimary         Boolean  @default(false)
+  backgroundRemoved String?
+  lightingEnhanced  String?
+  createdAt         DateTime @default(now())
+}

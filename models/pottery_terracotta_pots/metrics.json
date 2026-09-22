@@ -1,0 +1,49 @@
+{
+  "dataset_name": "02_Terracotta_Pots",
+  "total_records": 320,
+  "matched_pairs": 320,
+  "corrupt_images": 0,
+  "label_status": "DERIVED / HEURISTIC \u2014 NOT GROUND TRUTH",
+  "class_counts": {
+    "Terracotta Planter & Pot": 320
+  },
+  "splits": {
+    "train": 256,
+    "val": 32,
+    "test": 32
+  },
+  "training_duration_seconds": 36.09,
+  "val_best_accuracy": 1.0,
+  "test_accuracy": 1.0,
+  "balanced_accuracy": 1.0,
+  "macro_precision": 1.0,
+  "macro_recall": 1.0,
+  "macro_f1": 1.0,
+  "weighted_f1": 1.0,
+  "confusion_matrix": [
+    [
+      32
+    ]
+  ],
+  "classification_report": {
+    "Terracotta Planter & Pot": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 32.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 32.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 32.0
+    }
+  }
+}

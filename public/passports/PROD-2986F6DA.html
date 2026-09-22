@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Craft Passport — Khurja Terracotta Handcrafted Product</title>
+  <style>
+    :root {
+      --primary: #8b4513;
+      --secondary: #d2691e;
+      --bg: #faf7f2;
+      --card-bg: #ffffff;
+      --text: #2c3e50;
+      --muted: #7f8c8d;
+      --accent: #27ae60;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 16px;
+    }
+    .passport-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      overflow: hidden;
+      border: 1px solid #e8e0d5;
+    }
+    .header-banner {
+      background: linear-gradient(135deg, #8b4513, #d2691e);
+      color: white;
+      padding: 24px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .header-banner h1 { font-size: 1.4rem; font-weight: 700; letter-spacing: 0.5px; }
+    .header-banner .badge {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 12px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .product-hero { text-align: center; background: #f4eee5; padding: 16px; }
+    .product-hero-img { width: 100%; max-height: 320px; object-fit: cover; border-radius: 12px; }
+    .placeholder-hero-img {
+      height: 200px; display: flex; align-items: center; justify-content: center;
+      background: #e6dfd3; color: var(--muted); font-weight: 600; border-radius: 12px;
+    }
+    .content-section { padding: 24px 20px; }
+    .title-price-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
+    .product-title { font-size: 1.3rem; font-weight: 700; color: var(--primary); flex: 1; margin-right: 12px; }
+    .price-tag { font-size: 1.3rem; font-weight: 800; color: var(--secondary); white-space: nowrap; }
+    .specs-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+      background: #faf7f2; padding: 16px; border-radius: 12px; margin-bottom: 20px;
+    }
+    .spec-item .label { font-size: 0.75rem; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+    .spec-item .value { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-top: 2px; }
+    .artisan-box {
+      background: #fdfaf6; border-left: 4px solid var(--secondary);
+      padding: 16px; border-radius: 0 12px 12px 0; margin-bottom: 24px;
+    }
+    .artisan-box h3 { font-size: 1.05rem; color: var(--primary); margin-bottom: 6px; }
+    .artisan-box p { font-size: 0.9rem; color: #555; }
+    .passport-footer {
+      background: #f4eee5; padding: 20px; text-align: center; border-top: 1px dashed #d8cebe;
+      display: flex; flex-direction: column; align-items: center; gap: 12px;
+    }
+    .qr-container { background: white; padding: 10px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .passport-id-text { font-family: monospace; font-size: 0.85rem; color: var(--muted); letter-spacing: 1px; }
+    .trust-notice { font-size: 0.75rem; color: #888; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="passport-container">
+    <div class="header-banner">
+      <h1>KALORA Digital Craft Passport</h1>
+      <span class="badge">Needs Information</span>
+    </div>
+    
+    <div class="product-hero">
+      <img class="product-hero-img" src="pot.jpg" alt="Khurja Terracotta Handcrafted Product"/>
+    </div>
+
+    <div class="content-section">
+      <div class="title-price-row">
+        <div class="product-title">Khurja Terracotta Handcrafted Product</div>
+        <div class="price-tag">₹450.00</div>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-item"><div class="label">Sector</div><div class="value">Pottery &amp; Terracotta</div></div>
+        <div class="spec-item"><div class="label">Category</div><div class="value">UNCERTAIN</div></div>
+        <div class="spec-item"><div class="label">Material</div><div class="value">Terracotta</div></div>
+        <div class="spec-item"><div class="label">Technique</div><div class="value">Traditional Handmade</div></div>
+        <div class="spec-item"><div class="label">Region</div><div class="value">Khurja</div></div>
+        <div class="spec-item"><div class="label">Dimensions</div><div class="value">Standard Size</div></div>
+      </div>
+
+      <div class="artisan-box">
+        <h3>Artisan Story — Ramesh Prajapati</h3>
+        <p>Handcrafted by Ramesh Prajapati from Khurja, preserving traditional Indian heritage craftsmanship.</p>
+      </div>
+    </div>
+
+    <div class="passport-footer">
+      <div class="qr-container">
+        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4KPHN2ZyB3aWR0aD0iNDFtbSIgaGVpZ2h0PSI0MW1tIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA0MSA0MSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNCw0SDVWNUg0ek01LDRINlY1SDV6TTYsNEg3VjVINnpNNyw0SDhWNUg3ek04LDRIOVY1SDh6TTksNEgxMFY1SDl6TTEwLDRIMTFWNUgxMHpNMTMsNEgxNFY1SDEzek0xNCw0SDE1VjVIMTR6TTE2LDRIMTdWNUgxNnpNMTcsNEgxOFY1SDE3ek0xOCw0SDE5VjVIMTh6TTIwLDRIMjFWNUgyMHpNMjEsNEgyMlY1SDIxek0yMiw0SDIzVjVIMjJ6TTIzLDRIMjRWNUgyM3pNMjUsNEgyNlY1SDI1ek0yNyw0SDI4VjVIMjd6TTMwLDRIMzFWNUgzMHpNMzEsNEgzMlY1SDMxek0zMiw0SDMzVjVIMzJ6TTMzLDRIMzRWNUgzM3pNMzQsNEgzNVY1SDM0ek0zNSw0SDM2VjVIMzV6TTM2LDRIMzdWNUgzNnpNNCw1SDVWNkg0ek0xMCw1SDExVjZIMTB6TTEzLDVIMTRWNkgxM3pNMTQsNUgxNVY2SDE0ek0xNiw1SDE3VjZIMTZ6TTE3LDVIMThWNkgxN3pNMTgsNUgxOVY2SDE4ek0xOSw1SDIwVjZIMTl6TTIxLDVIMjJWNkgyMXpNMjUsNUgyNlY2SDI1ek0yOCw1SDI5VjZIMjh6TTMwLDVIMzFWNkgzMHpNMzYsNUgzN1Y2SDM2ek00LDZINVY3SDR6TTYsNkg3VjdINnpNNyw2SDhWN0g3ek04LDZIOVY3SDh6TTEwLDZIMTFWN0gxMHpNMTIsNkgxM1Y3SDEyek0xNyw2SDE4VjdIMTd6TTIxLDZIMjJWN0gyMXpNMjIsNkgyM1Y3SDIyek0yNSw2SDI2VjdIMjV6TTI2LDZIMjdWN0gyNnpNMjgsNkgyOVY3SDI4ek0zMCw2SDMxVjdIMzB6TTMyLDZIMzNWN0gzMnpNMzMsNkgzNFY3SDMzek0zNCw2SDM1VjdIMzR6TTM2LDZIMzdWN0gzNnpNNCw3SDVWOEg0ek02LDdIN1Y4SDZ6TTcsN0g4VjhIN3pNOCw3SDlWOEg4ek0xMCw3SDExVjhIMTB6TTEyLDdIMTNWOEgxMnpNMTUsN0gxNlY4SDE1ek0xNiw3SDE3VjhIMTZ6TTE4LDdIMTlWOEgxOHpNMTksN0gyMFY4SDE5ek0yMCw3SDIxVjhIMjB6TTI0LDdIMjVWOEgyNHpNMjcsN0gyOFY4SDI3ek0yOCw3SDI5VjhIMjh6TTMwLDdIMzFWOEgzMHpNMzIsN0gzM1Y4SDMyek0zMyw3SDM0VjhIMzN6TTM0LDdIMzVWOEgzNHpNMzYsN0gzN1Y4SDM2ek00LDhINVY5SDR6TTYsOEg3VjlINnpNNyw4SDhWOUg3ek04LDhIOVY5SDh6TTEwLDhIMTFWOUgxMHpNMTIsOEgxM1Y5SDEyek0xMyw4SDE0VjlIMTN6TTE0LDhIMTVWOUgxNHpNMTUsOEgxNlY5SDE1ek0xNiw4SDE3VjlIMTZ6TTE5LDhIMjBWOUgxOXpNMjEsOEgyMlY5SDIxek0yMiw4SDIzVjlIMjJ6TTMwLDhIMzFWOUgzMHpNMzIsOEgzM1Y5SDMyek0zMyw4SDM0VjlIMzN6TTM0LDhIMzVWOUgzNHpNMzYsOEgzN1Y5SDM2ek00LDlINVYxMEg0ek0xMCw5SDExVjEwSDEwek0xMiw5SDEzVjEwSDEyek0xNCw5SDE1VjEwSDE0ek0xNSw5SDE2VjEwSDE1ek0xOCw5SDE5VjEwSDE4ek0xOSw5SDIwVjEwSDE5ek0yMCw5SDIxVjEwSDIwek0yMSw5SDIyVjEwSDIxek0yNCw5SDI1VjEwSDI0ek0yNiw5SDI3VjEwSDI2ek0yOCw5SDI5VjEwSDI4ek0zMCw5SDMxVjEwSDMwek0zNiw5SDM3VjEwSDM2ek00LDEwSDVWMTFINHpNNSwxMEg2VjExSDV6TTYsMTBIN1YxMUg2ek03LDEwSDhWMTFIN3pNOCwxMEg5VjExSDh6TTksMTBIMTBWMTFIOXpNMTAsMTBIMTFWMTFIMTB6TTEyLDEwSDEzVjExSDEyek0xNCwxMEgxNVYxMUgxNHpNMTYsMTBIMTdWMTFIMTZ6TTE4LDEwSDE5VjExSDE4ek0yMCwxMEgyMVYxMUgyMHpNMjIsMTBIMjNWMTFIMjJ6TTI0LDEwSDI1VjExSDI0ek0yNiwxMEgyN1YxMUgyNnpNMjgsMTBIMjlWMTFIMjh6TTMwLDEwSDMxVjExSDMwek0zMSwxMEgzMlYxMUgzMXpNMzIsMTBIMzNWMTFIMzJ6TTMzLDEwSDM0VjExSDMzek0zNCwxMEgzNVYxMUgzNHpNMzUsMTBIMzZWMTFIMzV6TTM2LDEwSDM3VjExSDM2ek0xMiwxMUgxM1YxMkgxMnpNMTksMTFIMjBWMTJIMTl6TTI1LDExSDI2VjEySDI1ek0yNiwxMUgyN1YxMkgyNnpNNCwxMkg1VjEzSDR6TTYsMTJIN1YxM0g2ek03LDEySDhWMTNIN3pNOCwxMkg5VjEzSDh6TTksMTJIMTBWMTNIOXpNMTAsMTJIMTFWMTNIMTB6TTE1LDEySDE2VjEzSDE1ek0xNywxMkgxOFYxM0gxN3pNMTgsMTJIMTlWMTNIMTh6TTE5LDEySDIwVjEzSDE5ek0yMCwxMkgyMVYxM0gyMHpNMjEsMTJIMjJWMTNIMjF6TTI0LDEySDI1VjEzSDI0ek0yNiwxMkgyN1YxM0gyNnpNMjgsMTJIMjlWMTNIMjh6TTMwLDEySDMxVjEzSDMwek0zMSwxMkgzMlYxM0gzMXpNMzIsMTJIMzNWMTNIMzJ6TTMzLDEySDM0VjEzSDMzek0zNCwxMkgzNVYxM0gzNHpNNCwxM0g1VjE0SDR6TTcsMTNIOFYxNEg3ek04LDEzSDlWMTRIOHpNOSwxM0gxMFYxNEg5ek0xMSwxM0gxMlYxNEgxMXpNMTIsMTNIMTNWMTRIMTJ6TTE1LDEzSDE2VjE0SDE1ek0xNiwxM0gxN1YxNEgxNnpNMTgsMTNIMTlWMTRIMTh6TTIwLDEzSDIxVjE0SDIwek0yMywxM0gyNFYxNEgyM3pNMjYsMTNIMjdWMTRIMjZ6TTI3LDEzSDI4VjE0SDI3ek0zMCwxM0gzMVYxNEgzMHpNMzMsMTNIMzRWMTRIMzN6TTM0LDEzSDM1VjE0SDM0ek0zNSwxM0gzNlYxNEgzNXpNNSwxNEg2VjE1SDV6TTEwLDE0SDExVjE1SDEwek0xMSwxNEgxMlYxNUgxMXpNMTIsMTRIMTNWMTVIMTJ6TTEzLDE0SDE0VjE1SDEzek0xNSwxNEgxNlYxNUgxNXpNMTksMTRIMjBWMTVIMTl6TTIwLDE0SDIxVjE1SDIwek0yMiwxNEgyM1YxNUgyMnpNMjYsMTRIMjdWMTVIMjZ6TTI4LDE0SDI5VjE1SDI4ek0zMCwxNEgzMVYxNUgzMHpNMzIsMTRIMzNWMTVIMzJ6TTM0LDE0SDM1VjE1SDM0ek0zNSwxNEgzNlYxNUgzNXpNNiwxNUg3VjE2SDZ6TTExLDE1SDEyVjE2SDExek0xNSwxNUgxNlYxNkgxNXpNMTYsMTVIMTdWMTZIMTZ6TTE4LDE1SDE5VjE2SDE4ek0yMCwxNUgyMVYxNkgyMHpNMjUsMTVIMjZWMTZIMjV6TTI5LDE1SDMwVjE2SDI5ek0zMiwxNUgzM1YxNkgzMnpNMzMsMTVIMzRWMTZIMzN6TTM0LDE1SDM1VjE2SDM0ek01LDE2SDZWMTdINXpNNiwxNkg3VjE3SDZ6TTcsMTZIOFYxN0g3ek04LDE2SDlWMTdIOHpNMTAsMTZIMTFWMTdIMTB6TTExLDE2SDEyVjE3SDExek0xMiwxNkgxM1YxN0gxMnpNMTYsMTZIMTdWMTdIMTZ6TTIyLDE2SDIzVjE3SDIyek0yNiwxNkgyN1YxN0gyNnpNMjcsMTZIMjhWMTdIMjd6TTI4LDE2SDI5VjE3SDI4ek0zMiwxNkgzM1YxN0gzMnpNMzMsMTZIMzRWMTdIMzN6TTUsMTdINlYxOEg1ek02LDE3SDdWMThINnpNOSwxN0gxMFYxOEg5ek0xMSwxN0gxMlYxOEgxMXpNMTMsMTdIMTRWMThIMTN6TTE1LDE3SDE2VjE4SDE1ek0xNywxN0gxOFYxOEgxN3pNMTgsMTdIMTlWMThIMTh6TTE5LDE3SDIwVjE4SDE5ek0yMCwxN0gyMVYxOEgyMHpNMjQsMTdIMjVWMThIMjR6TTI1LDE3SDI2VjE4SDI1ek0yOSwxN0gzMFYxOEgyOXpNMzAsMTdIMzFWMThIMzB6TTMxLDE3SDMyVjE4SDMxek0zNCwxN0gzNVYxOEgzNHpNMzUsMTdIMzZWMThIMzV6TTM2LDE3SDM3VjE4SDM2ek03LDE4SDhWMTlIN3pNOCwxOEg5VjE5SDh6TTEwLDE4SDExVjE5SDEwek0xMSwxOEgxMlYxOUgxMXpNMTMsMThIMTRWMTlIMTN6TTE0LDE4SDE1VjE5SDE0ek0xNSwxOEgxNlYxOUgxNXpNMTYsMThIMTdWMTlIMTZ6TTIyLDE4SDIzVjE5SDIyek0yMywxOEgyNFYxOUgyM3pNMjgsMThIMjlWMTlIMjh6TTI5LDE4SDMwVjE5SDI5ek0zMCwxOEgzMVYxOUgzMHpNMzEsMThIMzJWMTlIMzF6TTMyLDE4SDMzVjE5SDMyek0zNSwxOEgzNlYxOUgzNXpNNCwxOUg1VjIwSDR6TTUsMTlINlYyMEg1ek02LDE5SDdWMjBINnpNNywxOUg4VjIwSDd6TTgsMTlIOVYyMEg4ek0xMiwxOUgxM1YyMEgxMnpNMTMsMTlIMTRWMjBIMTN6TTE2LDE5SDE3VjIwSDE2ek0xOCwxOUgxOVYyMEgxOHpNMjAsMTlIMjFWMjBIMjB6TTIyLDE5SDIzVjIwSDIyek0yMywxOUgyNFYyMEgyM3pNMjQsMTlIMjVWMjBIMjR6TTI1LDE5SDI2VjIwSDI1ek0yNiwxOUgyN1YyMEgyNnpNMjcsMTlIMjhWMjBIMjd6TTMxLDE5SDMyVjIwSDMxek0zMywxOUgzNFYyMEgzM3pNMzQsMTlIMzVWMjBIMzR6TTUsMjBINlYyMUg1ek04LDIwSDlWMjFIOHpNMTAsMjBIMTFWMjFIMTB6TTExLDIwSDEyVjIxSDExek0xMiwyMEgxM1YyMUgxMnpNMTQsMjBIMTVWMjFIMTR6TTE1LDIwSDE2VjIxSDE1ek0xNiwyMEgxN1YyMUgxNnpNMTcsMjBIMThWMjFIMTd6TTIxLDIwSDIyVjIxSDIxek0yMywyMEgyNFYyMUgyM3pNMjQsMjBIMjVWMjFIMjR6TTI2LDIwSDI3VjIxSDI2ek0yOCwyMEgyOVYyMUgyOHpNMjksMjBIMzBWMjFIMjl6TTMxLDIwSDMyVjIxSDMxek0zMiwyMEgzM1YyMUgzMnpNMzQsMjBIMzVWMjFIMzR6TTM2LDIwSDM3VjIxSDM2ek01LDIxSDZWMjJINXpNMTEsMjFIMTJWMjJIMTF6TTEyLDIxSDEzVjIySDEyek0xMywyMUgxNFYyMkgxM3pNMTQsMjFIMTVWMjJIMTR6TTE1LDIxSDE2VjIySDE1ek0xNiwyMUgxN1YyMkgxNnpNMTgsMjFIMTlWMjJIMTh6TTIwLDIxSDIxVjIySDIwek0yMSwyMUgyMlYyMkgyMXpNMjIsMjFIMjNWMjJIMjJ6TTIzLDIxSDI0VjIySDIzek0yNiwyMUgyN1YyMkgyNnpNMjcsMjFIMjhWMjJIMjd6TTMwLDIxSDMxVjIySDMwek0zMSwyMUgzMlYyMkgzMXpNMzMsMjFIMzRWMjJIMzN6TTM0LDIxSDM1VjIySDM0ek0zNSwyMUgzNlYyMkgzNXpNNSwyMkg2VjIzSDV6TTYsMjJIN1YyM0g2ek03LDIySDhWMjNIN3pNOCwyMkg5VjIzSDh6TTEwLDIySDExVjIzSDEwek0xMSwyMkgxMlYyM0gxMXpNMTUsMjJIMTZWMjNIMTV6TTE2LDIySDE3VjIzSDE2ek0xOSwyMkgyMFYyM0gxOXpNMjEsMjJIMjJWMjNIMjF6TTI1LDIySDI2VjIzSDI1ek0zMCwyMkgzMVYyM0gzMHpNMzIsMjJIMzNWMjNIMzJ6TTM0LDIySDM1VjIzSDM0ek0zNSwyMkgzNlYyM0gzNXpNNCwyM0g1VjI0SDR6TTUsMjNINlYyNEg1ek02LDIzSDdWMjRINnpNOCwyM0g5VjI0SDh6TTEyLDIzSDEzVjI0SDEyek0xMywyM0gxNFYyNEgxM3pNMTUsMjNIMTZWMjRIMTV6TTE2LDIzSDE3VjI0SDE2ek0xOSwyM0gyMFYyNEgxOXpNMjEsMjNIMjJWMjRIMjF6TTIyLDIzSDIzVjI0SDIyek0yNSwyM0gyNlYyNEgyNXpNMjgsMjNIMjlWMjRIMjh6TTMyLDIzSDMzVjI0SDMyek0zMywyM0gzNFYyNEgzM3pNMzQsMjNIMzVWMjRIMzR6TTM1LDIzSDM2VjI0SDM1ek0zNiwyM0gzN1YyNEgzNnpNNCwyNEg1VjI1SDR6TTUsMjRINlYyNUg1ek03LDI0SDhWMjVIN3pNOSwyNEgxMFYyNUg5ek0xMCwyNEgxMVYyNUgxMHpNMTEsMjRIMTJWMjVIMTF6TTE3LDI0SDE4VjI1SDE3ek0xOCwyNEgxOVYyNUgxOHpNMTksMjRIMjBWMjVIMTl6TTIwLDI0SDIxVjI1SDIwek0yNiwyNEgyN1YyNUgyNnpNMzIsMjRIMzNWMjVIMzJ6TTMzLDI0SDM0VjI1SDMzek0zNSwyNEgzNlYyNUgzNXpNMzYsMjRIMzdWMjVIMzZ6TTQsMjVINVYyNkg0ek01LDI1SDZWMjZINXpNNiwyNUg3VjI2SDZ6TTksMjVIMTBWMjZIOXpNMTEsMjVIMTJWMjZIMTF6TTE0LDI1SDE1VjI2SDE0ek0xNSwyNUgxNlYyNkgxNXpNMTcsMjVIMThWMjZIMTd6TTE5LDI1SDIwVjI2SDE5ek0yMiwyNUgyM1YyNkgyMnpNMjUsMjVIMjZWMjZIMjV6TTI2LDI1SDI3VjI2SDI2ek0yNywyNUgyOFYyNkgyN3pNMjgsMjVIMjlWMjZIMjh6TTI5LDI1SDMwVjI2SDI5ek0zMCwyNUgzMVYyNkgzMHpNMzEsMjVIMzJWMjZIMzF6TTMzLDI1SDM0VjI2SDMzek0zNiwyNUgzN1YyNkgzNnpNNCwyNkg1VjI3SDR6TTcsMjZIOFYyN0g3ek04LDI2SDlWMjdIOHpNOSwyNkgxMFYyN0g5ek0xMCwyNkgxMVYyN0gxMHpNMTYsMjZIMTdWMjdIMTZ6TTE4LDI2SDE5VjI3SDE4ek0xOSwyNkgyMFYyN0gxOXpNMjAsMjZIMjFWMjdIMjB6TTIyLDI2SDIzVjI3SDIyek0yNSwyNkgyNlYyN0gyNXpNMjYsMjZIMjdWMjdIMjZ6TTI4LDI2SDI5VjI3SDI4ek0yOSwyNkgzMFYyN0gyOXpNMzAsMjZIMzFWMjdIMzB6TTMzLDI2SDM0VjI3SDMzek0zNSwyNkgzNlYyN0gzNXpNNCwyN0g1VjI4SDR6TTYsMjdIN1YyOEg2ek03LDI3SDhWMjhIN3pNOCwyN0g5VjI4SDh6TTExLDI3SDEyVjI4SDExek0xMiwyN0gxM1YyOEgxMnpNMTMsMjdIMTRWMjhIMTN6TTE5LDI3SDIwVjI4SDE5ek0yNCwyN0gyNVYyOEgyNHpNMjUsMjdIMjZWMjhIMjV6TTI3LDI3SDI4VjI4SDI3ek0yOSwyN0gzMFYyOEgyOXpNMzAsMjdIMzFWMjhIMzB6TTMyLDI3SDMzVjI4SDMyek0zMywyN0gzNFYyOEgzM3pNMzQsMjdIMzVWMjhIMzR6TTM2LDI3SDM3VjI4SDM2ek00LDI4SDVWMjlINHpNNiwyOEg3VjI5SDZ6TTksMjhIMTBWMjlIOXpNMTAsMjhIMTFWMjlIMTB6TTExLDI4SDEyVjI5SDExek0xMiwyOEgxM1YyOUgxMnpNMTQsMjhIMTVWMjlIMTR6TTE2LDI4SDE3VjI5SDE2ek0xOCwyOEgxOVYyOUgxOHpNMTksMjhIMjBWMjlIMTl6TTIwLDI4SDIxVjI5SDIwek0yMSwyOEgyMlYyOUgyMXpNMjMsMjhIMjRWMjlIMjN6TTI0LDI4SDI1VjI5SDI0ek0yOCwyOEgyOVYyOUgyOHpNMjksMjhIMzBWMjlIMjl6TTMwLDI4SDMxVjI5SDMwek0zMSwyOEgzMlYyOUgzMXpNMzIsMjhIMzNWMjlIMzJ6TTM0LDI4SDM1VjI5SDM0ek0xMiwyOUgxM1YzMEgxMnpNMTMsMjlIMTRWMzBIMTN6TTE2LDI5SDE3VjMwSDE2ek0xOCwyOUgxOVYzMEgxOHpNMjAsMjlIMjFWMzBIMjB6TTIzLDI5SDI0VjMwSDIzek0yNSwyOUgyNlYzMEgyNXpNMjYsMjlIMjdWMzBIMjZ6TTI4LDI5SDI5VjMwSDI4ek0zMiwyOUgzM1YzMEgzMnpNMzQsMjlIMzVWMzBIMzR6TTM2LDI5SDM3VjMwSDM2ek00LDMwSDVWMzFINHpNNSwzMEg2VjMxSDV6TTYsMzBIN1YzMUg2ek03LDMwSDhWMzFIN3pNOCwzMEg5VjMxSDh6TTksMzBIMTBWMzFIOXpNMTAsMzBIMTFWMzFIMTB6TTE0LDMwSDE1VjMxSDE0ek0xNiwzMEgxN1YzMUgxNnpNMTcsMzBIMThWMzFIMTd6TTE5LDMwSDIwVjMxSDE5ek0yMCwzMEgyMVYzMUgyMHpNMjIsMzBIMjNWMzFIMjJ6TTI0LDMwSDI1VjMxSDI0ek0yNSwzMEgyNlYzMUgyNXpNMjYsMzBIMjdWMzFIMjZ6TTI3LDMwSDI4VjMxSDI3ek0yOCwzMEgyOVYzMUgyOHpNMzAsMzBIMzFWMzFIMzB6TTMyLDMwSDMzVjMxSDMyek0zNCwzMEgzNVYzMUgzNHpNNCwzMUg1VjMySDR6TTEwLDMxSDExVjMySDEwek0xMiwzMUgxM1YzMkgxMnpNMTMsMzFIMTRWMzJIMTN6TTE0LDMxSDE1VjMySDE0ek0xNSwzMUgxNlYzMkgxNXpNMTYsMzFIMTdWMzJIMTZ6TTE3LDMxSDE4VjMySDE3ek0yMywzMUgyNFYzMkgyM3pNMjUsMzFIMjZWMzJIMjV6TTI3LDMxSDI4VjMySDI3ek0yOCwzMUgyOVYzMkgyOHpNMzIsMzFIMzNWMzJIMzJ6TTM0LDMxSDM1VjMySDM0ek0zNSwzMUgzNlYzMkgzNXpNMzYsMzFIMzdWMzJIMzZ6TTQsMzJINVYzM0g0ek02LDMySDdWMzNINnpNNywzMkg4VjMzSDd6TTgsMzJIOVYzM0g4ek0xMCwzMkgxMVYzM0gxMHpNMTIsMzJIMTNWMzNIMTJ6TTEzLDMySDE0VjMzSDEzek0xNCwzMkgxNVYzM0gxNHpNMTYsMzJIMTdWMzNIMTZ6TTE5LDMySDIwVjMzSDE5ek0yMiwzMkgyM1YzM0gyMnpNMjYsMzJIMjdWMzNIMjZ6TTI4LDMySDI5VjMzSDI4ek0yOSwzMkgzMFYzM0gyOXpNMzAsMzJIMzFWMzNIMzB6TTMxLDMySDMyVjMzSDMxek0zMiwzMkgzM1YzM0gzMnpNMzMsMzJIMzRWMzNIMzN6TTQsMzNINVYzNEg0ek02LDMzSDdWMzRINnpNNywzM0g4VjM0SDd6TTgsMzNIOVYzNEg4ek0xMCwzM0gxMVYzNEgxMHpNMTIsMzNIMTNWMzRIMTJ6TTEzLDMzSDE0VjM0SDEzek0xNCwzM0gxNVYzNEgxNHpNMTUsMzNIMTZWMzRIMTV6TTE2LDMzSDE3VjM0SDE2ek0xOCwzM0gxOVYzNEgxOHpNMTksMzNIMjBWMzRIMTl6TTIwLDMzSDIxVjM0SDIwek0yMywzM0gyNFYzNEgyM3pNMjQsMzNIMjVWMzRIMjR6TTI3LDMzSDI4VjM0SDI3ek0yOSwzM0gzMFYzNEgyOXpNMzEsMzNIMzJWMzRIMzF6TTMyLDMzSDMzVjM0SDMyek0zMywzM0gzNFYzNEgzM3pNMzQsMzNIMzVWMzRIMzR6TTM1LDMzSDM2VjM0SDM1ek0zNiwzM0gzN1YzNEgzNnpNNCwzNEg1VjM1SDR6TTYsMzRIN1YzNUg2ek03LDM0SDhWMzVIN3pNOCwzNEg5VjM1SDh6TTEwLDM0SDExVjM1SDEwek0xMiwzNEgxM1YzNUgxMnpNMTMsMzRIMTRWMzVIMTN6TTE0LDM0SDE1VjM1SDE0ek0xNiwzNEgxN1YzNUgxNnpNMjEsMzRIMjJWMzVIMjF6TTIyLDM0SDIzVjM1SDIyek0yNCwzNEgyNVYzNUgyNHpNMjgsMzRIMjlWMzVIMjh6TTMwLDM0SDMxVjM1SDMwek0zMSwzNEgzMlYzNUgzMXpNMzQsMzRIMzVWMzVIMzR6TTQsMzVINVYzNkg0ek0xMCwzNUgxMVYzNkgxMHpNMTMsMzVIMTRWMzZIMTN6TTE0LDM1SDE1VjM2SDE0ek0xNiwzNUgxN1YzNkgxNnpNMTgsMzVIMTlWMzZIMTh6TTIwLDM1SDIxVjM2SDIwek0yNCwzNUgyNVYzNkgyNHpNMjUsMzVIMjZWMzZIMjV6TTI4LDM1SDI5VjM2SDI4ek0yOSwzNUgzMFYzNkgyOXpNMzEsMzVIMzJWMzZIMzF6TTMyLDM1SDMzVjM2SDMyek0zNCwzNUgzNVYzNkgzNHpNNCwzNkg1VjM3SDR6TTUsMzZINlYzN0g1ek02LDM2SDdWMzdINnpNNywzNkg4VjM3SDd6TTgsMzZIOVYzN0g4ek05LDM2SDEwVjM3SDl6TTEwLDM2SDExVjM3SDEwek0xMiwzNkgxM1YzN0gxMnpNMTMsMzZIMTRWMzdIMTN6TTE1LDM2SDE2VjM3SDE1ek0xNiwzNkgxN1YzN0gxNnpNMjAsMzZIMjFWMzdIMjB6TTIxLDM2SDIyVjM3SDIxek0yMywzNkgyNFYzN0gyM3pNMjQsMzZIMjVWMzdIMjR6TTI3LDM2SDI4VjM3SDI3ek0yOCwzNkgyOVYzN0gyOHpNMzAsMzZIMzFWMzdIMzB6TTMxLDM2SDMyVjM3SDMxek0zMiwzNkgzM1YzN0gzMnpNMzUsMzZIMzZWMzdIMzV6IiBpZD0icXItcGF0aCIgZmlsbD0iIzAwMDAwMCIgZmlsbC1vcGFjaXR5PSIxIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgLz48L3N2Zz4=" alt="QR Code" width="140" height="140"/>
+      </div>
+      <div class="passport-id-text">ID: KALORA-PASSPORT-965254A8</div>
+      <div class="trust-notice">Verified Rural Heritage Handicraft • Powered by KALORA</div>
+    </div>
+  </div>
+</body>
+</html>

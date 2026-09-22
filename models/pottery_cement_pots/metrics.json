@@ -1,0 +1,49 @@
+{
+  "dataset_name": "05_Cement_Pots",
+  "total_records": 525,
+  "matched_pairs": 525,
+  "corrupt_images": 0,
+  "label_status": "DERIVED / HEURISTIC \u2014 NOT GROUND TRUTH",
+  "class_counts": {
+    "Cement Planter & Pot": 525
+  },
+  "splits": {
+    "train": 420,
+    "val": 52,
+    "test": 53
+  },
+  "training_duration_seconds": 98.99,
+  "val_best_accuracy": 1.0,
+  "test_accuracy": 1.0,
+  "balanced_accuracy": 1.0,
+  "macro_precision": 1.0,
+  "macro_recall": 1.0,
+  "macro_f1": 1.0,
+  "weighted_f1": 1.0,
+  "confusion_matrix": [
+    [
+      53
+    ]
+  ],
+  "classification_report": {
+    "Cement Planter & Pot": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 53.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 53.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 53.0
+    }
+  }
+}

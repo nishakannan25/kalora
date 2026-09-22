@@ -1,0 +1,22 @@
+{
+  "model_architecture": "MobileNetV3-Small",
+  "input_resolution": "224x224",
+  "num_classes": 6,
+  "class2idx": {
+    "Chairs & Stools": 0,
+    "Sofas & Loungers": 1,
+    "Storage & Cabinets": 2,
+    "Swings & Jhulas": 3,
+    "Tables & Desks": 4,
+    "Wooden Decor & Handicrafts": 5
+  },
+  "idx2class": {
+    "0": "Chairs & Stools",
+    "1": "Sofas & Loungers",
+    "2": "Storage & Cabinets",
+    "3": "Swings & Jhulas",
+    "4": "Tables & Desks",
+    "5": "Wooden Decor & Handicrafts"
+  },
+  "derived_labels_status": "DERIVED / HEURISTIC \u2014 NOT GROUND TRUTH"
+}

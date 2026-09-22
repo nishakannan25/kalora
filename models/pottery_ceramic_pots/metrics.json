@@ -1,0 +1,88 @@
+{
+  "dataset_name": "01_Ceramic_Pots",
+  "total_records": 2690,
+  "matched_pairs": 2690,
+  "training_sample": 2690,
+  "label_status": "DERIVED / HEURISTIC \u2014 NOT GROUND TRUTH",
+  "class_counts": {
+    "Ceramic Planter & Pot": 2622,
+    "Ceramic Decorative Vase": 68
+  },
+  "splits": {
+    "train": 2152,
+    "val": 269,
+    "test": 269
+  },
+  "training_duration_seconds": 1476.6,
+  "val_best_accuracy": 0.9888,
+  "test_accuracy": 0.9814,
+  "balanced_accuracy": 0.6429,
+  "macro_precision": 0.9906,
+  "macro_recall": 0.6429,
+  "macro_f1": 0.7175,
+  "weighted_f1": 0.9763,
+  "confusion_matrix": [
+    [
+      2,
+      5
+    ],
+    [
+      0,
+      262
+    ]
+  ],
+  "classification_report": {
+    "Ceramic Decorative Vase": {
+      "precision": 1.0,
+      "recall": 0.2857142857142857,
+      "f1-score": 0.4444444444444444,
+      "support": 7.0
+    },
+    "Ceramic Planter & Pot": {
+      "precision": 0.9812734082397003,
+      "recall": 1.0,
+      "f1-score": 0.9905482041587902,
+      "support": 262.0
+    },
+    "accuracy": 0.9814126394052045,
+    "macro avg": {
+      "precision": 0.9906367041198502,
+      "recall": 0.6428571428571428,
+      "f1-score": 0.7174963243016172,
+      "support": 269.0
+    },
+    "weighted avg": {
+      "precision": 0.9817607173189646,
+      "recall": 0.9814126394052045,
+      "f1-score": 0.9763373256532123,
+      "support": 269.0
+    }
+  },
+  "training_history": [
+    {
+      "epoch": 1,
+      "loss": 0.2197,
+      "val_acc": 0.974
+    },
+    {
+      "epoch": 2,
+      "loss": 0.1051,
+      "val_acc": 0.9814
+    },
+    {
+      "epoch": 3,
+      "loss": 0.0846,
+      "val_acc": 0.9851
+    },
+    {
+      "epoch": 4,
+      "loss": 0.076,
+      "val_acc": 0.9888
+    },
+    {
+      "epoch": 5,
+      "loss": 0.0707,
+      "val_acc": 0.9851
+    }
+  ]
+}

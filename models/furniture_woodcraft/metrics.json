@@ -1,0 +1,115 @@
+{
+  "dataset_name": "Furniture_Woodcraft_Dataset",
+  "total_records": 990,
+  "matched_pairs": 483,
+  "corrupt_images": 0,
+  "class_counts": {
+    "Wooden Decor & Handicrafts": 308,
+    "Chairs & Stools": 67,
+    "Tables & Desks": 54,
+    "Storage & Cabinets": 29,
+    "Swings & Jhulas": 15,
+    "Sofas & Loungers": 10
+  },
+  "splits": {
+    "train": 386,
+    "val": 48,
+    "test": 49
+  },
+  "training_duration_seconds": 47.22,
+  "val_best_accuracy": 0.625,
+  "test_accuracy": 0.7755,
+  "balanced_accuracy": 0.5581,
+  "macro_precision": 0.5,
+  "macro_recall": 0.5581,
+  "macro_f1": 0.5182,
+  "weighted_f1": 0.7241,
+  "confusion_matrix": [
+    [
+      5,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      2,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      4
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      30
+    ]
+  ],
+  "classification_report": {
+    "Chairs & Stools": {
+      "precision": 0.8333333333333334,
+      "recall": 0.7142857142857143,
+      "f1-score": 0.7692307692307693,
+      "support": 7
+    },
+    "Sofas & Loungers": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1
+    },
+    "Storage & Cabinets": {
+      "precision": 0.3333333333333333,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.4444444444444444,
+      "support": 3
+    },
+    "Swings & Jhulas": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1
+    },
+    "Tables & Desks": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 6
+    },
+    "Wooden Decor & Handicrafts": {
+      "precision": 0.8333333333333334,
+      "recall": 0.967741935483871,
+      "f1-score": 0.8955223880597015,
+      "support": 31
+    }
+  }
+}

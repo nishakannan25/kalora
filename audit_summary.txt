@@ -1,0 +1,13 @@
+Dataset 01_Ceramic_Pots          | Records:  2690 | Folder Images:  2690 | Matched Pairs:  2690
+Dataset 02_Terracotta_Pots       | Records:   320 | Folder Images:   386 | Matched Pairs:   320
+Dataset 03_Plastic_Pots          | Records:  2913 | Folder Images:  3317 | Matched Pairs:  2913
+Dataset 04_Clay_Pots             | Records:   339 | Folder Images:   339 | Matched Pairs:   339
+Dataset 05_Cement_Pots           | Records:   525 | Folder Images:   525 | Matched Pairs:   525
+Dataset 06_Hanging_Planters      | Records:   947 | Folder Images:   947 | Matched Pairs:   947
+Dataset 07_Bonsai_Pots           | Records:  1000 | Folder Images:  1000 | Matched Pairs:  1000
+Dataset 08_Decorative_Planters   | Records:  1000 | Folder Images:  1000 | Matched Pairs:  1000
+Dataset 09_Large_Garden_Pots     | Records:  1000 | Folder Images:  1000 | Matched Pairs:  1000
+Dataset 10_Small_Indoor_Pots     | Records:  1000 | Folder Images:  1000 | Matched Pairs:  1000
+
+TOTAL RECORDS: 11734
+TOTAL MATCHED: 11734

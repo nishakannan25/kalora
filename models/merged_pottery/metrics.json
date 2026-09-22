@@ -1,0 +1,228 @@
+{
+  "dataset_name": "Merged_Pottery_10_Datasets",
+  "total_records": 11734,
+  "matched_pairs": 11734,
+  "corrupt_images": 0,
+  "class_counts": {
+    "Plastic Nursery Pots": 2913,
+    "Ceramic Pots & Vases": 2690,
+    "Bonsai Pots": 1000,
+    "Decorative Planters": 1000,
+    "Large Garden Pots": 1000,
+    "Small Indoor Pots": 1000,
+    "Hanging Planters": 947,
+    "Cement Garden Pots": 525,
+    "Clay Earthenware Pots": 339,
+    "Terracotta Pots & Craft": 320
+  },
+  "splits": {
+    "train": 9387,
+    "val": 1173,
+    "test": 1174
+  },
+  "training_duration_seconds": 38276.89,
+  "val_best_accuracy": 0.5132,
+  "test_accuracy": 0.4855,
+  "balanced_accuracy": 0.4041,
+  "macro_precision": 0.4261,
+  "macro_recall": 0.4041,
+  "macro_f1": 0.4119,
+  "weighted_f1": 0.4746,
+  "confusion_matrix": [
+    [
+      81,
+      3,
+      6,
+      0,
+      3,
+      0,
+      4,
+      1,
+      0,
+      2
+    ],
+    [
+      1,
+      26,
+      9,
+      0,
+      0,
+      1,
+      2,
+      8,
+      5,
+      0
+    ],
+    [
+      6,
+      2,
+      173,
+      5,
+      22,
+      1,
+      9,
+      32,
+      13,
+      6
+    ],
+    [
+      0,
+      0,
+      15,
+      2,
+      1,
+      3,
+      0,
+      4,
+      4,
+      5
+    ],
+    [
+      0,
+      2,
+      52,
+      3,
+      18,
+      0,
+      2,
+      19,
+      4,
+      0
+    ],
+    [
+      1,
+      2,
+      1,
+      5,
+      2,
+      59,
+      3,
+      19,
+      3,
+      0
+    ],
+    [
+      4,
+      1,
+      24,
+      1,
+      7,
+      6,
+      18,
+      24,
+      15,
+      0
+    ],
+    [
+      3,
+      0,
+      46,
+      4,
+      16,
+      16,
+      19,
+      160,
+      25,
+      3
+    ],
+    [
+      1,
+      2,
+      18,
+      0,
+      4,
+      5,
+      15,
+      28,
+      25,
+      2
+    ],
+    [
+      0,
+      3,
+      2,
+      5,
+      1,
+      4,
+      1,
+      7,
+      1,
+      8
+    ]
+  ],
+  "classification_report": {
+    "Bonsai Pots": {
+      "precision": 0.8350515463917526,
+      "recall": 0.81,
+      "f1-score": 0.8223350253807107,
+      "support": 100.0
+    },
+    "Cement Garden Pots": {
+      "precision": 0.6341463414634146,
+      "recall": 0.5,
+      "f1-score": 0.5591397849462365,
+      "support": 52.0
+    },
+    "Ceramic Pots & Vases": {
+      "precision": 0.5,
+      "recall": 0.6431226765799256,
+      "f1-score": 0.5626016260162602,
+      "support": 269.0
+    },
+    "Clay Earthenware Pots": {
+      "precision": 0.08,
+      "recall": 0.058823529411764705,
+      "f1-score": 0.06779661016949153,
+      "support": 34.0
+    },
+    "Decorative Planters": {
+      "precision": 0.24324324324324326,
+      "recall": 0.18,
+      "f1-score": 0.20689655172413793,
+      "support": 100.0
+    },
+    "Hanging Planters": {
+      "precision": 0.6210526315789474,
+      "recall": 0.6210526315789474,
+      "f1-score": 0.6210526315789474,
+      "support": 95.0
+    },
+    "Large Garden Pots": {
+      "precision": 0.2465753424657534,
+      "recall": 0.18,
+      "f1-score": 0.20809248554913296,
+      "support": 100.0
+    },
+    "Plastic Nursery Pots": {
+      "precision": 0.5298013245033113,
+      "recall": 0.547945205479452,
+      "f1-score": 0.5387205387205387,
+      "support": 292.0
+    },
+    "Small Indoor Pots": {
+      "precision": 0.2631578947368421,
+      "recall": 0.25,
+      "f1-score": 0.2564102564102564,
+      "support": 100.0
+    },
+    "Terracotta Pots & Craft": {
+      "precision": 0.3076923076923077,
+      "recall": 0.25,
+      "f1-score": 0.27586206896551724,
+      "support": 32.0
+    },
+    "accuracy": 0.4855195911413969,
+    "macro avg": {
+      "precision": 0.42607206320755725,
+      "recall": 0.4040944043050089,
+      "f1-score": 0.41189075794612295,
+      "support": 1174.0
+    },
+    "weighted avg": {
+      "precision": 0.4706529412614799,
+      "recall": 0.4855195911413969,
+      "f1-score": 0.4746402098646155,
+      "support": 1174.0
+    }
+  }
+}

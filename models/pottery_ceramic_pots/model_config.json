@@ -1,0 +1,21 @@
+{
+  "model_name": "PotteryCeramicPotsClassifier",
+  "dataset_name": "01_Ceramic_Pots",
+  "total_records": 2690,
+  "matched_pairs": 2690,
+  "sampled_training_size": 2690,
+  "label_status": "DERIVED / HEURISTIC \u2014 NOT GROUND TRUTH",
+  "classes": [
+    "Ceramic Decorative Vase",
+    "Ceramic Planter & Pot"
+  ],
+  "num_classes": 2,
+  "backbone": "MobileNetV3-Small",
+  "max_epochs": 5,
+  "splits": {
+    "train": 2152,
+    "val": 269,
+    "test": 269
+  },
+  "uncertainty_threshold": 0.6
+}

@@ -1,0 +1,18 @@
+{
+  "dataset_name": "Furniture_Dataset_Archive",
+  "total_images": 15000,
+  "class_counts": {
+    "Almirah": 3000,
+    "Chair": 3000,
+    "Fridge": 3000,
+    "Table": 3000,
+    "TV": 3000
+  },
+  "categories": [
+    "Almirah",
+    "Chair",
+    "Fridge",
+    "TV",
+    "Table"
+  ]
+}

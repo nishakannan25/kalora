@@ -1,0 +1,25 @@
+{
+  "model_name": "PotteryPlasticPotsClassifier",
+  "dataset_name": "03_Plastic_Pots",
+  "total_records": 2913,
+  "matched_pairs": 2913,
+  "corrupt_images": 0,
+  "label_status": "DERIVED / HEURISTIC \u2014 NOT GROUND TRUTH",
+  "classes": [
+    "Plastic Hanging Planter",
+    "Plastic Planter & Pot"
+  ],
+  "num_classes": 2,
+  "backbone": "MobileNetV3-Small",
+  "batch_size": 32,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "max_epochs": 8,
+  "early_stopping_patience": 2,
+  "splits": {
+    "train": 2330,
+    "val": 291,
+    "test": 292
+  },
+  "uncertainty_threshold": 0.6
+}

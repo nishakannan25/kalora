@@ -1,0 +1,52 @@
+{
+  "price_statistics": {
+    "min_price": 750.0,
+    "max_price": 43500.0,
+    "median_price": 2940.0,
+    "mean_price": 7837.19,
+    "price_by_material": {
+      "Cotton Handloom": 3044.7428571428572,
+      "Silk / Fine Weaver": 20739.923076923078
+    }
+  },
+  "class_distribution": {
+    "Cotton Handloom": 35,
+    "Silk / Fine Weaver": 13
+  },
+  "split_counts": {
+    "train": 33,
+    "test": 8,
+    "val": 7
+  },
+  "experiment_a_text_accuracy": 1.0,
+  "experiment_b_ablated_text_accuracy": 1.0,
+  "experiment_c_vision_val_accuracy": 0.7143,
+  "experiment_c_vision_test_accuracy": 0.875,
+  "test_classification_report": {
+    "Cotton Handloom": {
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "f1-score": 0.9230769230769231,
+      "support": 6.0
+    },
+    "Silk / Fine Weaver": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1-score": 0.6666666666666666,
+      "support": 2.0
+    },
+    "accuracy": 0.875,
+    "macro avg": {
+      "precision": 0.9285714285714286,
+      "recall": 0.75,
+      "f1-score": 0.7948717948717949,
+      "support": 8.0
+    },
+    "weighted avg": {
+      "precision": 0.8928571428571428,
+      "recall": 0.875,
+      "f1-score": 0.8589743589743589,
+      "support": 8.0
+    }
+  }
+}

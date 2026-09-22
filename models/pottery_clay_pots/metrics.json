@@ -1,0 +1,49 @@
+{
+  "dataset_name": "04_Clay_Pots",
+  "total_records": 339,
+  "matched_pairs": 339,
+  "corrupt_images": 0,
+  "label_status": "DERIVED / HEURISTIC \u2014 NOT GROUND TRUTH",
+  "class_counts": {
+    "Clay Planter & Pot": 339
+  },
+  "splits": {
+    "train": 271,
+    "val": 34,
+    "test": 34
+  },
+  "training_duration_seconds": 77.7,
+  "val_best_accuracy": 1.0,
+  "test_accuracy": 1.0,
+  "balanced_accuracy": 1.0,
+  "macro_precision": 1.0,
+  "macro_recall": 1.0,
+  "macro_f1": 1.0,
+  "weighted_f1": 1.0,
+  "confusion_matrix": [
+    [
+      34
+    ]
+  ],
+  "classification_report": {
+    "Clay Planter & Pot": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 34.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 34.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 34.0
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "dataset_name": "03_Plastic_Pots",
+  "total_records": 2913,
+  "matched_pairs": 2913,
+  "corrupt_images": 0,
+  "label_status": "DERIVED / HEURISTIC \u2014 NOT GROUND TRUTH",
+  "class_counts": {
+    "Plastic Planter & Pot": 2512,
+    "Plastic Hanging Planter": 401
+  },
+  "splits": {
+    "train": 2330,
+    "val": 291,
+    "test": 292
+  },
+  "training_duration_seconds": 2952.74,
+  "val_best_accuracy": 0.866,
+  "test_accuracy": 0.8596,
+  "balanced_accuracy": 0.5296,
+  "macro_precision": 0.6494,
+  "macro_recall": 0.5296,
+  "macro_f1": 0.5257,
+  "weighted_f1": 0.8146,
+  "confusion_matrix": [
+    [
+      3,
+      37
+    ],
+    [
+      4,
+      248
+    ]
+  ],
+  "classification_report": {
+    "Plastic Hanging Planter": {
+      "precision": 0.42857142857142855,
+      "recall": 0.075,
+      "f1-score": 0.1276595744680851,
+      "support": 40.0
+    },
+    "Plastic Planter & Pot": {
+      "precision": 0.8701754385964913,
+      "recall": 0.9841269841269841,
+      "f1-score": 0.9236499068901304,
+      "support": 252.0
+    },
+    "accuracy": 0.8595890410958904,
+    "macro avg": {
+      "precision": 0.6493734335839599,
+      "recall": 0.5295634920634921,
+      "f1-score": 0.5256547406791078,
+      "support": 292.0
+    },
+    "weighted avg": {
+      "precision": 0.809681738593058,
+      "recall": 0.8595890410958904,
+      "f1-score": 0.8146101353254667,
+      "support": 292.0
+    }
+  }
+}

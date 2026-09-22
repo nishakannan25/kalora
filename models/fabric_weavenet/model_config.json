@@ -1,0 +1,20 @@
+{
+  "model_name": "FabricWeaveNetClassifier",
+  "dataset_name": "Fabric WeaveNet Dataset (FinalFabric)",
+  "total_images": 2000,
+  "classes": [
+    "Banarasi",
+    "Bandhani",
+    "Kanjeevaram",
+    "Patola",
+    "Tussar"
+  ],
+  "num_classes": 5,
+  "backbone": "MobileNetV3-Small",
+  "splits": {
+    "train": 1600,
+    "val": 200,
+    "test": 200
+  },
+  "uncertainty_threshold": 0.6
+}

@@ -1,0 +1,24 @@
+{
+  "model_name": "PotteryCementPotsClassifier",
+  "dataset_name": "05_Cement_Pots",
+  "total_records": 525,
+  "matched_pairs": 525,
+  "corrupt_images": 0,
+  "label_status": "DERIVED / HEURISTIC \u2014 NOT GROUND TRUTH",
+  "classes": [
+    "Cement Planter & Pot"
+  ],
+  "num_classes": 1,
+  "backbone": "MobileNetV3-Small",
+  "batch_size": 32,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "max_epochs": 8,
+  "early_stopping_patience": 2,
+  "splits": {
+    "train": 420,
+    "val": 52,
+    "test": 53
+  },
+  "uncertainty_threshold": 0.6
+}
